@@ -1,4 +1,5 @@
 import './App.css';
+import FadeInSection from './components/FadeInSection';
 
 const SECTIONS = [
   { id: 'mission', label: 'Our Mission' },
@@ -31,22 +32,18 @@ export default function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg-anim" />
-        <h1>Empowering intelligent decisions through collective knowledge.</h1>
+        <h1 className="hero-title-black">Empowering intelligent decisions through collective knowledge.</h1>
         <p className="hero-sub">Bestsale is pioneering AI solutions that turn expert knowledge into actionable insight, helping people and organizations make their best decisions.</p>
-        <div className="hero-cta">
-          <button onClick={() => scrollToSection('contact')}>Get Involved</button>
-          <button onClick={() => scrollToSection('mission')}>Our Mission</button>
-        </div>
       </section>
 
       {/* Mission */}
-      <section className="section" id="mission">
+      <FadeInSection className="section" id="mission">
         <h2>Our Mission</h2>
         <p>We founded Bestsale to rethink how the world accesses expertise. In a time of endless information, <b>our mission is to identify and deliver the <i>right</i> knowledge at the right time</b>—so that every decision can be informed by the best insight available. We are driven by the belief that <b>better knowledge leads to better outcomes</b>, whether it's a business strategy or a personal choice. To that end, we're <b>building AI that learns from the brightest minds</b> and shares their wisdom widely, <b>amplifying human expertise</b> rather than replacing it.</p>
-      </section>
+      </FadeInSection>
 
       {/* Approach */}
-      <section className="section" id="approach">
+      <FadeInSection className="section" id="approach">
         <h2>Our Approach</h2>
         <div className="approach-cards">
           <div className="approach-card">
@@ -63,10 +60,10 @@ export default function App() {
           </div>
         </div>
         <p className="approach-note">(Note: Bestsale's technology is currently in the R&D phase. We are exploring these innovations in closed testing and will share updates on our progress. We do not have a commercial product or live service yet—our focus is on getting the science and experience right, hand-in-hand with expert partners.)</p>
-      </section>
+      </FadeInSection>
 
       {/* Principles */}
-      <section className="section" id="principles">
+      <FadeInSection className="section" id="principles">
         <h2>Our Principles</h2>
         <div className="principles-list">
           <div className="principle">
@@ -86,16 +83,16 @@ export default function App() {
             <p><i>Building with the community.</i> We believe solving knowledge problems benefits everyone, so we aim to collaborate openly. This means partnering with academics on research, integrating feedback from early adopters, and sharing our findings responsibly. We thrive on <b>partnership and diverse perspectives</b>, because big problems are best tackled together.</p>
           </div>
         </div>
-      </section>
+      </FadeInSection>
 
       {/* Who We Are */}
-      <section className="section" id="team">
+      <FadeInSection className="section" id="team">
         <h2>Who We Are</h2>
         <p>Bestsale is a small team with big aspirations. We are AI researchers, engineers, and strategists who have previously built knowledge systems and enterprise platforms. Frustrated by how often critical expertise gets lost or siloed, we joined forces to create a solution. Our team members have contributed to advances in machine learning and have seen firsthand how AI can transform decision-making when it's applied thoughtfully. We're united by a passion for bridging the gap between what experts know and what the rest of us can access. Though we're at the start of this journey, we bring a wealth of experience in AI and a shared commitment to use technology for meaningful, positive impact.</p>
-      </section>
+      </FadeInSection>
 
       {/* Get Involved */}
-      <section className="section contact-section" id="contact">
+      <FadeInSection className="section contact-section" id="contact">
         <h2>Get Involved</h2>
         <p>We're in the <b>visionary stage</b> of Bestsale's development—and this is the perfect time to connect with those who share our excitement. If our mission resonates with you, let's start a conversation:</p>
         <ul className="contact-list">
@@ -106,7 +103,7 @@ export default function App() {
         <a className="contact-btn" href="mailto:hello@bestsale.ai">Contact us</a>
         <span className="contact-info">gy2220@nyu.edu &nbsp;|&nbsp; GY Yang</span>
         <p className="contact-note">Bestsale is currently a research-stage project. We have no commercial offerings at this time—our website and content are for sharing our vision and fostering connections. We commit to updating our community as we progress. Thank you for your interest and support as we build something new, step by step.</p>
-      </section>
+      </FadeInSection>
 
       {/* Footer */}
       <footer className="footer">
