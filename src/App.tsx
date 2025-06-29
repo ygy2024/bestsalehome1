@@ -2,11 +2,11 @@ import './App.css';
 import FadeInSection from './components/FadeInSection';
 
 const SECTIONS = [
-  { id: 'mission', label: 'Our Mission' },
-  { id: 'approach', label: 'Our Approach' },
-  { id: 'principles', label: 'Our Principles' },
-  { id: 'team', label: 'Who We Are' },
-  { id: 'contact', label: 'Get Involved' },
+  { id: 'mission', label: 'Mission' },
+  { id: 'approach', label: 'Approach' },
+  { id: 'principles', label: 'Values' },
+  { id: 'team', label: 'Team' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 function scrollToSection(id: string) {
@@ -17,9 +17,9 @@ function scrollToSection(id: string) {
 export default function App() {
   return (
     <div className="main-wrapper">
-      {/* Vertical Navigation on right */}
-      <nav className="side-nav">
-        <div className="side-logo">Bestsale</div>
+      {/* Top Horizontal Navigation */}
+      <nav className="top-nav">
+        <div className="top-logo">Bestsale</div>
         <ul>
           {SECTIONS.map((s) => (
             <li key={s.id}>
@@ -32,7 +32,7 @@ export default function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg-anim" />
-        <h1 className="hero-title-black">Empowering intelligent decisions through collective knowledge.</h1>
+        <h1>Empowering intelligent decisions through collective knowledge.</h1>
         <p className="hero-sub">Bestsale is pioneering AI solutions that turn expert knowledge into actionable insight, helping people and organizations make their best decisions.</p>
       </section>
 
@@ -88,7 +88,7 @@ export default function App() {
       {/* Who We Are */}
       <FadeInSection className="section" id="team">
         <h2>Who We Are</h2>
-        <p>Bestsale is a small team with big aspirations. We are AI researchers, engineers, and strategists who have previously built knowledge systems and enterprise platforms. Frustrated by how often critical expertise gets lost or siloed, we joined forces to create a solution. Our team members have contributed to advances in machine learning and have seen firsthand how AI can transform decision-making when it's applied thoughtfully. We're united by a passion for bridging the gap between what experts know and what the rest of us can access. Though we're at the start of this journey, we bring a wealth of experience in AI and a shared commitment to use technology for meaningful, positive impact.</p>
+        <p>Bestsale is a small team with big aspirations, originally formed at NYU. We are AI researchers, engineers, and strategists who have previously built knowledge systems and enterprise platforms. Frustrated by how often critical expertise gets lost or siloed, we joined forces to create a solution. Our team members have contributed to advances in machine learning and have seen firsthand how AI can transform decision-making when it's applied thoughtfully. We're united by a passion for bridging the gap between what experts know and what the rest of us can access. Though we're at the start of this journey, we bring a wealth of experience in AI and a shared commitment to use technology for meaningful, positive impact.</p>
       </FadeInSection>
 
       {/* Get Involved */}
