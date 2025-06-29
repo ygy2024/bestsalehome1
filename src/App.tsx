@@ -16,9 +16,9 @@ function scrollToSection(id: string) {
 export default function App() {
   return (
     <div className="main-wrapper">
-      {/* Navigation */}
-      <nav className="nav">
-        <div className="logo">Bestsale</div>
+      {/* Vertical Navigation on right */}
+      <nav className="side-nav">
+        <div className="side-logo">Bestsale</div>
         <ul>
           {SECTIONS.map((s) => (
             <li key={s.id}>
