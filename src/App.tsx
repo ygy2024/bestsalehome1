@@ -101,8 +101,9 @@ export default function App() {
         const h2Height = el.offsetHeight;
         const rect = el.getBoundingClientRect();
         const delta = rect.top - navHeight;
-        const min = h2Height - 6;
-        const max = h2Height + 6;
+        // 拓宽激活区间：下方再拓宽2.5倍h2高度
+        const min = h2Height - 6 - 2.5 * h2Height;
+        const max = h2Height + 6 + 5 * h2Height;
         if (delta >= min && delta <= max) {
           const dist = Math.abs(delta - h2Height);
           if (dist < bestDist) {
