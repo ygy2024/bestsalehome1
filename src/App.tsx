@@ -101,8 +101,8 @@ export default function App() {
         const h2Height = el.offsetHeight;
         const rect = el.getBoundingClientRect();
         const delta = rect.top - navHeight;
-        // 拓宽激活区间：下方再拓宽2.5倍h2高度
-        const min = h2Height - 6 - 2.5 * h2Height;
+        // 激活区间上边缘限制为距离导航下边缘2倍h2高度
+        const min = navHeight + 2 * h2Height;
         const max = h2Height + 6 + 5 * h2Height;
         if (delta >= min && delta <= max) {
           const dist = Math.abs(delta - h2Height);
