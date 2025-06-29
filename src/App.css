@@ -1,0 +1,348 @@
+html, body, #root, .main-wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.section, .approach-cards, .principles-list {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f8fafc;
+  color: #222;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: #2563eb;
+}
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.nav button:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.hero {
+  position: relative;
+  padding: 6rem 2rem 4rem 2rem;
+  text-align: center;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+.hero-bg-anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  max-width: 100vw;
+  max-height: 100vw;
+  background: radial-gradient(circle at 50% 50%, #2563eb22 0%, #fff0 80%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: heroPulse 6s infinite alternate;
+  pointer-events: none;
+}
+@keyframes heroPulse {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+  position: relative;
+}
+.hero-sub {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 2.2rem;
+  z-index: 1;
+  position: relative;
+}
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  z-index: 1;
+  position: relative;
+}
+.hero-cta button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #2563eb22;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-cta button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2.5rem 1.5rem;
+  text-align: left;
+}
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #2563eb;
+}
+.section p, .section ul {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.approach-cards {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.approach-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 #2563eb11;
+  padding: 2rem 1.5rem;
+  flex: 1 1 240px;
+  min-width: 220px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.approach-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px 0 #2563eb22;
+}
+.approach-note {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 1.2rem;
+  font-style: italic;
+}
+
+.principles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+.principle {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  flex: 1 1 220px;
+  min-width: 200px;
+  box-shadow: 0 1px 6px 0 #2563eb0a;
+  transition: box-shadow 0.2s;
+}
+.principle:hover {
+  box-shadow: 0 4px 16px 0 #2563eb22;
+}
+
+.contact-section ul.contact-list {
+  margin: 1.2rem 0 1.5rem 1.2rem;
+  padding: 0;
+  list-style: disc inside;
+}
+.contact-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.85rem 2.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px 0 #2563eb22;
+  transition: background 0.2s, transform 0.2s;
+  font-size: 1.1rem;
+}
+.contact-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px) scale(1.04);
+}
+.contact-note {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 1.2rem;
+  font-style: italic;
+}
+
+.contact-info {
+  display: inline-block;
+  margin-left: 1.2rem;
+  font-size: 1.08rem;
+  color: #2563eb;
+  vertical-align: middle;
+  word-break: break-all;
+}
+
+.footer {
+  background: #fff;
+  color: #222;
+  text-align: center;
+  padding: 2rem 1rem 1.2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+.footer-tagline {
+  font-size: 1.1rem;
+  color: #2563eb;
+  margin: 0.5rem 0 0.7rem 0;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.footer-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #1d4ed8;
+}
+
+/* 新增/优化响应式设计 */
+@media (min-width: 1600px) {
+  .section {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 1200px) {
+  .section {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 900px) {
+  .approach-cards, .principles-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+  }
+  .hero-cta button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 2.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .section {
+    padding: 1.2rem 0.2rem 0.7rem 0.2rem;
+    max-width: 100vw;
+  }
+  .nav ul {
+    gap: 0.5rem;
+  }
+  .footer {
+    padding: 1.2rem 0.2rem 0.7rem 0.2rem;
+  }
+  .approach-card, .principle {
+    padding: 1.1rem 0.7rem;
+    min-width: 0;
+    font-size: 0.98rem;
+  }
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .contact-info {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.7rem;
+    text-align: left;
+    font-size: 0.98rem;
+  }
+}
+
+/* 适配超小屏幕（如iPhone SE） */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+  .section h2 {
+    font-size: 1.1rem;
+  }
+}
